@@ -1,0 +1,23 @@
+h1 {
+  margin:0;
+  color: black;
+  font-family: blotter;
+  font-size: 3000%;
+  word-break: break-word;
+}
+h2 {
+  color: black;
+  font-family: moderat;
+  font-size: 500%;
+}
+p  {
+  color: white;
+  font-family: Moderat, bold;
+  font-size: 80%;
+  word-break: break-word;
+}
+h3 {
+  color: yellow;
+  font-family: blotter;
+  font-size: 80%;
+}
