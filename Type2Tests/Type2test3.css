@@ -1,0 +1,65 @@
+@font-face{
+  font-family:"Favorit";
+  src:url(Favorit-Regular.woff);
+  font-weight:Regular;
+}
+
+@font-face{
+  font-family:"Times Now";
+  src:url(TimesNow-Light.woff);
+  font-weight:Regular;
+}
+
+
+h1 {
+	font-family: Favorit;
+	line-height: 1.2;
+	margin-right: 500px;
+	margin-left: 70px;
+	font-size: 25px;
+	color:black;
+}
+
+h2 {
+	font-family: Favorit;
+	line-height: 1.2;
+	margin-right: 250px;
+	margin-left: 70px;
+	font-size: 50px;
+}
+
+p {
+	font-family: Times Now;
+	color: black;
+	line-height: 1.5;
+	font-size: 18px;
+	display: block;
+	margin-right: 600px;
+	margin-left: 50px;
+	z-index: 110;
+}
+
+body {
+	margin: 40px auto 40px auto;
+	margin-left: 15%;
+	margin-right: : 15%;
+	text-align: left;
+	max-width: 1160px;
+	min-width: 375px;
+	min-height: 375px;
+	max-height: 1360px;
+
+}
+
+.fixed {
+	position: fixed;
+	display: block;
+}
+
+#image{
+	width: 600px;
+	height: 400px;
+	size:100%;
+	margin-left: 0px;
+	z-index: 100;
+}
