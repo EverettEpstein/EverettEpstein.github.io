@@ -1,0 +1,56 @@
+body {
+	margin: 100px auto 100px auto;
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: left;
+	max-width: 1280px;
+	min-width: 375px;
+  background-color: 255;
+}
+
+#title {
+	font-family: Ohno-Blazeface, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 200px;
+  color: #f7d000;
+  text-align:center;
+  color: 208;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  z-index: 0;
+  flex: 1;
+} 
+
+p {
+	font-family: Ohno-Blazeface, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+	line-height: 1.2;
+  font-size: 35px;
+  color: #f7d000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+#canvas {
+  position: (0,0);
+  z-index:-1;
+}
+
+canvas {
+   position: fixed !important;
+}
+
+.fixed {
+  position: fixed;
+  display: block;
+}
+
+#image{
+  width: 600px;
+  height: 400px;
+  size:100%;
+  margin-left: 0px;
+  z-index: 100;
+}

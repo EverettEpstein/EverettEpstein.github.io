@@ -1,0 +1,35 @@
+body {
+	margin: 100px auto 100px auto;
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: left;
+	max-width: 1280px;
+	min-width: 375px;
+    background-color: #f7d000;
+}
+
+#title {
+	font-family: Hobeaux Rococeaux;
+	line-height: 1.2;
+    font-size: 90px;
+    color: 0;
+} 
+
+p {
+	font-family: Hobeaux-Rococeaux-Sherman, sans-serif;
+    font-weight: 400px;
+    font-style: normal;
+	line-height: 1.2;
+    font-size: 35px;
+    color: 0;
+}
+
+#canvas {
+  position: (0,0);
+  z-index:-1;
+}
+
+canvas {
+   position: fixed !important;
+}
+

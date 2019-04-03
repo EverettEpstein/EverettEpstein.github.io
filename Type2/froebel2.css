@@ -1,0 +1,36 @@
+body {
+	margin: 100px auto 100px auto;
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: left;
+	max-width: 1280px;
+	min-width: 375px;
+    background-color: #f7d000;
+}
+
+#title {
+	font-family: Beastly, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 200px;
+    color: #f7d000;
+    text-align:center;
+} 
+
+p {
+	font-family: covik-sans, sans-serif;
+	font-weight: 700;
+    font-style: normal;
+	line-height: 1.2;
+    font-size: 35px;
+    color: #f7d000;
+}
+
+#canvas {
+  position: (0,0);
+  z-index:-1;
+}
+
+canvas {
+   position: fixed !important;
+}
