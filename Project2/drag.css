@@ -1,0 +1,70 @@
+body {
+	margin: 40px auto 40px auto;
+	margin-left: 40px;
+	margin-right: : 0px;
+	text-align: left;
+	max-width: 1160px;
+	min-width: 375px;
+	cursor: url("face-without-mouth.jpg") 25 25, pointer;
+}
+
+h1 {
+	font-family: Acronym;
+	line-height: 1.2;
+}
+
+a {
+	font-family:Glossy Display; 
+	line-height: 1.2;
+}
+
+a>div { 
+	display: none; 
+}
+a:hover>div { 
+	display: inline-block;
+	width: 0px;
+	height: 0px; 
+}
+
+#image{
+	display: block;
+	width: 300px;
+	height: 300px;
+}
+
+#image1{
+	display: block;
+	width: 200px;
+	height: 200px;
+}
+
+#image2{
+	display: block;
+	width: 400px;
+	height: 300px;
+}
+
+#image3{
+	display: block;
+	width: 300px;
+	height: 300px;
+}
+
+#image4{
+	display: block;
+	width: 300px;
+	height: 300px;
+}
+
+#image5{
+	display: block;
+	width: 220px;
+	height: 342px;
+}
+
+#image6{
+	display: block;
+	width: 400px;
+	height: 300px;
+}
