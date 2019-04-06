@@ -1,11 +1,23 @@
+ @-webkit-keyframes colorchange {
+      0% {
+        color: #F7D000;
+      }
+      
+      50% {
+        color: white;
+      }
+      100% {
+        color: #F7D000;
+      }
+    }
+
+
+
 body {
 	margin: 100px auto 100px auto;
-	margin-left: 20%;
-	margin-right: 20%;
-	text-align: left;
+	text-align: center;
 	max-width: 1280px;
 	min-width: 375px;
-    background-color: #f7d000;
 }
 
 #title {
@@ -13,10 +25,14 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 200px;
-    color: #f7d000;
     text-align:center;
-} 
+    transition-property: font-color;
+    transition-duration: .03s;
+    position: absolute;
+    -webkit-animation:colorchange 10s infinite;
+}
 
+  
 p {
 	font-family: covik-sans, sans-serif;
 	font-weight: 700;
@@ -34,3 +50,4 @@ p {
 canvas {
    position: fixed !important;
 }
+

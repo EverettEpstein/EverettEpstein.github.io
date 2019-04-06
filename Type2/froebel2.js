@@ -2,9 +2,9 @@ let angle = 0;
 
 let layout1;
 
-function preload(){
-	layout1 = loadImage("froebeltext.jpg");
-}
+// function preload(){
+// 	layout1 = loadImage("froebeltext.jpg");
+// }
 
 var cnv; 
 
@@ -26,21 +26,17 @@ function windowResized() {
 }
 
 function draw() {
-	push();
-	ambientLight (255);
-	background(255,29,37);
+	background (255);
+	ambientMaterial(255);
+	ambientLight(247,208,0);
+	noStroke ();
 	translate (mouseX -width/2, mouseY-height/2);
-	rotateX(angle);
-	rotateZ(angle);
-
-	texture (layout1);
-	rectMode(CENTER);
-	// rect (0, 0, 250, 300);
-	box (300, 300, 300);
-	ambientMaterial (255);
-
-	angle +=.005;
-	pop();
+    push();
+    rotateZ(frameCount * 0.01);
+    rotateX(frameCount * 0.01);
+    rotateY(frameCount * 0.01);
+    cylinder(70, 300);
+    pop();
 
 	
 }
