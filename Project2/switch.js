@@ -1,9 +1,9 @@
 // IMAGE CURSOR //
 
 $(document).mousemove(function(e) {
-    $(".squishy").offset({
-        left: e.pageX -330,
-        top: e.pageY + -320
+    $(".triangle").offset({
+        left: e.pageX -370,
+        top: e.pageY + -400
     });
 });
 
@@ -24,13 +24,3 @@ function setup() {
 
 function draw() {;
 }
-
-// ANIMATION //
-
-squishy.loadAnimation({
-  container: document.getElementById("squishy", // the dom element that will contain the animation
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: 'squishy.json' // the path to the animation json
-});

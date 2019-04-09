@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Acronym";
+  font-style: Regular;
+  src: url("Acronym-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Acronym";
+  font-style: Bold;
+  src: url("Acronym-Bold.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Glossy Display";
+  src: url("GlossyDisplay-Regular.woff") format("woff");
+}
+
 h1 {
 	font-family: Acronym;
 	line-height: 1.2;
@@ -273,9 +291,9 @@ a:hover>div {
 .image1 {
   width: 60%;
   height: auto;
-  -webkit-animation:spin 4s linear infinite;
+/*  -webkit-animation:spin 4s linear infinite;
   -moz-animation:spin 4s linear infinite;
-  animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;*/
 }
 
 .smallpent {
