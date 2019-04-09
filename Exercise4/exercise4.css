@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Acronym";
+  font-style: Regular;
+  src: url("Acronym-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Acronym";
+  font-style: Bold;
+  src: url("Acronym-Bold.woff") format("woff");
+}
+
+#div1 {
+	display: block;
+	width: 500px;
+    height: 100px;
+    background-color: blue;
+    border: 1px solid blue;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-family: Acronym;
+    font-size: 40px;
+}
+
+#div2 {
+	display: block;
+	width: 100px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid blue;
+    float: left;
+    font-family: Acronym;
+    font-size: 40px;
+}
+
+#div3 {
+	display: block;
+	width: 610px;
+    height: 50px;
+    background-color: yellow;
+    border: 1px solid blue;
+    clear:left;
+    font-family: Acronym;
+    font-size: 40px;
+}
+
+header {
+    width: 610px;
+    height: 50px;
+    border: 1px solid blue;
+    float: none;
+    font-family: Acronym;
+    font-size: 40px;
+}
+
+footer {
+    width: 610px;
+    height: 50px;
+    border: 1px solid blue;
+    float: none;
+    font-family: Acronym;
+    font-size: 40px;
+}

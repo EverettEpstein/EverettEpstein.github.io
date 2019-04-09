@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Acronym";
+  font-style: Regular;
+  src: url("Acronym-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Acronym";
+  font-style: Bold;
+  src: url("Acronym-Bold.woff") format("woff");
+}
+
+
+body {
+	font-family: Acronym;
+	font-style: Bold;
+	font-size: 20px;
+}
+
+#box {
+	background-color: yellow;
+	padding: 20px 20px 20px 20px;
+	margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+	float: left;
+	text-align: center;
+}
+
+/*blog format*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 1em;
+}
+
+header,
+aside,
+article,
+footer {
+  background: yellow;
+  padding: 1em;
+}
+
+header, footer {
+  grid-column: 1 / 4;
+}
+
+/* Demo Specific Styles */
+#body1 {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+.grid > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
