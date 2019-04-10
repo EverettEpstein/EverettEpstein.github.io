@@ -1,4 +1,6 @@
- @-webkit-keyframes colorchange {
+/* ANIMATION */
+
+@-webkit-keyframes colorchange {
       0% {
         color: #F7D000;
       }
@@ -11,36 +13,28 @@
       }
     }
 
-
+/* TITLE */
 
 body {
-	margin: 100px auto 100px auto;
+	margin-top: 0px;
+  margin: 100px auto 100px auto;
 	text-align: center;
 	max-width: 1280px;
 	min-width: 375px;
 }
 
 #title {
-	font-family: Beastly, sans-serif;
+	font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 200px;
+    font-size: 275px;
     text-align:center;
-    transition-property: font-color;
+    /*transition-property: font-color;
     transition-duration: .03s;
-    position: absolute;
-    -webkit-animation:colorchange 10s infinite;
+    position: relative;
+    -webkit-animation:colorchange 10s infinite;*/
 }
 
-  
-p {
-	font-family: covik-sans, sans-serif;
-	font-weight: 700;
-    font-style: normal;
-	line-height: 1.2;
-    font-size: 35px;
-    color: #f7d000;
-}
 
 #canvas {
   position: (0,0);
@@ -49,5 +43,188 @@ p {
 
 canvas {
    position: fixed !important;
+}
+
+/* BODY TEXT */
+
+.triangle {
+  position: relative;
+  flex-direction: column;
+  z-index: -10;
+}
+
+.blob {
+  margin-top: -100;
+  margin-bottom: -100;
+  width: 60%;
+  height: auto;
+  z-index: -10;
+}
+
+#image1{
+  display: block;
+  width: 150px;
+  height: 200px;
+}
+
+#image2{
+  display: block;
+  width: 200px;
+  height: 130px;
+}
+
+#image3{
+  display: block;
+  width: 130px;
+  height: 200px;
+}
+
+#image4{
+  margin-top: 0px;
+  display: block;
+  width: 300px;
+  height: 175px;
+}
+
+ol{
+  margin-top:0px;
+    margin-left: 0px;
+    font-family: poynter-oldstyle-text, serif;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 15px;
+    font-style: italic; 
+    color: black;
+    text-align: left;
+}
+
+p {
+    margin-top:0px;
+    margin-left: 10px;
+    font-family: poynter-oldstyle-text, serif;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 15px;
+    font-style: normal; 
+    color: black;
+    text-align: left;
+}
+
+#div1 {
+    display: block;
+    width: 630px;
+    height: 500px;
+    border: none;
+    float: left;
+    margin-left: 65px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-family: poynter-oldstyle-text, serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    font-size: 37px;
+    overflow:auto;
+    color: black;
+    text-align: left;
+}
+
+#div2 {
+    display: block;
+    width: 250px;
+    height: 300px;
+    border: none;
+    float: left;
+    margin-left: 5px;
+}
+
+#quote {
+  font-family: poynter-oldstyle-text, serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  font-size: 15px;
+  font-style: italic; 
+  color: black;
+  text-align: left;
+  padding-left: 30px;
+}
+
+#div3 {
+  display: block;
+  width: 610px;
+  height: 150px;
+  margin-left: 50px;
+  clear:left;
+}
+
+#div4 {
+    display: block;
+    width: 630px;
+    height: 300px;
+    border: none;
+    float: left;
+    margin-left: 65px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-family: poynter-oldstyle-text, serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    font-size: 37px;
+    overflow:auto;
+    color: black;
+    text-align: left;
+}
+
+#div5 {
+    column-count: 4;
+    display: block;
+    width: 1000px;
+    height: 600px;
+    border: none;
+    float: left;
+    margin-left: 65px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-family: poynter-oldstyle-text, serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    font-size: 20px;
+    overflow:auto;
+    color: black;
+    text-align: left;
+}
+
+
+
+header {
+    width: 610px;
+    height: 60px;
+    border: none;
+    margin-left: 65px;
+    float: none;
+    font-family: ohno-blazeface, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 1.2;
+    font-size: 40px;
+    color: black;
+}
+
+footer {
+    width: 610px;
+    height: 50px;
+    border: 1px solid blue;
+    margin-left: 50px;
+    float: none;
+    font-family: covik-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.2;
+    font-size: 35px;
+    color: #f7d000;
 }
 
