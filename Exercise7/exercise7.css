@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Times Now";
+  src: url("TimesNow-Light.woff") format("woff");
+}
+
+body {
+	margin-left: 10%;
+	margin-right: 10%;
+	font-family: Helvetica;
+	font-weight: 500;
+	font-size: 4rem;
+	margin-bottom: 10;
+}
+
+.list1 {
+	color:black;
+	font-family: Times Now;
+	font-weight: 100;
+}
+
+.list2 {
+	color:black;
+	font-family: Times Now;
+	font-weight: 100;
+}
+
+.list3 {
+	color:black;
+	font-family: Times Now;
+	font-weight: 100;
+}
+
+.list4 {
+	color:black;
+	font-family: Times Now;
+	font-weight: 100;
+}
+
+button {
+	font-family: Helvetica;
+	font-weight: 500;
+	font-size: 2rem;
+	background-color: transparent;
+	margin-top: 10;
+}
+
+img {
+	position:absolute;
+	z-index: -10;
+	margin-top: 0;
+	display: inline-block;
+	width: : 200%;
+	height: auto;
+}
