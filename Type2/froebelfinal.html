@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+      <script language="javascript" type="text/javascript" src="p5/p5.dom.js"></script>
+      <script src="froebel2.js"></script>
+      <link rel="stylesheet" href="https://use.typekit.net/uil4osq.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#canvas {
+  position: (0,0);
+  z-index:-1;
+}
+
+canvas {
+   position: fixed !important;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  /*background: #f1f1f1;*/
+}
+
+/* Header/Blog Title */
+.header {
+  font-family: ohno-blazeface, sans-serif;
+  color: #EE2D30;
+  font-style: normal;
+  font-weight: 100;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 175px;
+}
+
+/* Typefaces */
+
+h2 {
+  font-family: ohno-blazeface, sans-serif;
+  color: #EE2D30;
+  font-style: normal;
+  font-weight: 100;
+  text-align: left;
+  line-height: 1.2;
+  font-size: 60px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+p {
+    font-family: poynter-oldstyle-text, serif;
+    color: #EE2D30;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 1.2;
+    font-size: 25px;
+}
+
+#smalltext {
+    font-family: poynter-oldstyle-text, serif;
+    font-weight: 800;
+    line-height: 1.2;
+    font-size: 15px;
+    font-style: normal; 
+    color: #EE2D30;
+    text-align: left;
+    padding-right: 40px; 
+}
+
+#quote {
+  font-family: poynter-oldstyle-text, serif;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+  font-size: 15px;
+  font-style: italic; 
+  color: #EE2D30;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+
+/* Style the top navigation bar */
+.topnav {
+  margin-top: 0px;
+  overflow: hidden;
+  background-color:#EE2D30;
+}
+
+/* Style the topnav links */
+.topnav a {
+  font-family: poynter-oldstyle-text, serif;
+  color: #F7D10D;
+  font-weight: 800;
+  font-size: 20px;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 65%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 35%;
+  /*background-color: #f1f1f1;*/
+  padding-left: 20px;
+}
+
+/* Images */
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+#image1{
+  display: block;
+  width: auto;
+  height: 250px;
+}
+#image2{
+  display: block;
+  width: auto;
+  height: 500px;
+}
+#image3{
+  display: block;
+  width: auto;
+  height: 90px;
+}
+#image4{
+  display: inline-block;
+  float:left;
+  margin-right: 10px;
+  width: auto;
+  height: 400px;
+}
+
+#ball1{
+  display: inline-block;
+  float:left;
+  margin-right: 10px;
+  width: auto;
+  height: 200px;
+}
+
+#blocks{
+  display: inline-block;
+  float:left;
+  margin-right: 10px;
+  width: auto;
+  height: 300px;
+}
+
+#block{
+  display: inline-block;
+  float:left;
+  margin-right: 10px;
+  width: auto;
+  height: 150px;
+}
+
+#image5{
+  display: block;
+  width: auto;
+  height: 175px;
+}
+#image6{
+  display: block;
+  width: auto;
+  height: 200px;
+}
+/* Add a card effect for articles */
+.card {
+  /*background-color: white;*/
+  padding: 20px;
+  margin-top: 20px;
+  outline: 3px solid #EE2D30;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  /*background: #ddd;*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 300px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Froebel Gifts</h1>
+</div>
+
+<div class="topnav">
+  <a href="https://99percentinvisible.org/episode/froebels-gifts/">99% Invisible</a>
+  <a href="https://en.wikipedia.org/wiki/Froebel_gifts">Wikipedia Entry</a>
+  <a href="https://www.curbed.com/2018/6/11/17438480/alexandra-lange-book-design-of-childhood">The Design of Childhood</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Introduction</h2>
+      <div><img src="kinder.png" id="image2" class="responsive"></div>
+          <p>The Froebel gifts (German: Fröbelgaben) are play materials for young children designed by Friedrich Fröbel for the original Kindergarten at Bad Blankenburg. Playing with Froebel gifts, singing, dancing and growing plants were each important aspects of this child-centered approach to education created by Friedrich Fröbel.<br><br>
+          Between May 1837 and 1850, the Froebel gifts were made in Bad Blankenburg in the Principality of Schwarzburg Rudolstadt, by master carpenter Löhn, assisted by artisans and women of the village.[2]
+          <br><br>Fröbel also developed a series of occupations such as sewing, weaving and the modelling with clay, for children to reconstruct their experiences through play.<br><br>
+          Ottilie de Liagre in a letter to Fröbel in 1844 observed that playing with the Froebel gifts empowers children to be lively and free, but people can degrade it into a mechanical routine.</span></p>
+    </div>
+    <div class="card">
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+          <div id="smalltext"> <img src="Frobel.png" id="image1" class="responsive"></div>
+          <br>
+            <div id="smalltext">&#8592;The Sonntagsblatt (1838-1840) published by Fröbel explained the meaning, and described the use of each of his five play gifts (Spielgabe):</div>
+              <div id="quote"> The active and creative, living and life producing being of each person, reveals itself in the creative instinct of the child. All human education is bound up in the quiet and conscientious nurture of this instinct of activity; and in the ability of the child, true to this instinct, to be active.</div>
+    </div>
+    <div class="card">
+      <div> <img src="kinderhouse.png" id="image5"class="responsive"></div>
+      <div><p><img src="child.png" id="image1"></p></div>
+    </div>
+    <div class="card">
+      <p></p>
+    </div>
+  </div>
+</div>
+
+<div class="topnav">
+  <a></div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Gift One</h2>
+          <p><img src="ball1.png" id="ball1" class="responsive">The first gift is a soft ball or yarn ball in solid color, which is the right size for the hand of a small child. When attached to a matching string, the ball can be moved by a mother in various ways as she sings to the child. Although Fröbel sold single balls, they are now usually supplied in sets of six balls consisting of the primary colors red, yellow and blue, as well as their secondary colors, purple, green and orange. These soft balls can be squashed in the hand, and they revert to their original shapes.</p>
+    </div>
+    <div class="card">
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+          <div id="smalltext"><img src="gift1" id="image3" class="responsive"></div>
+          <br>
+            <div id="smalltext">&#8592;The first gift was intended by Fröbel to be given to very young children. His intention was that, through holding, dropping, rolling, swinging, hiding and revealing the balls, the child may acquire knowledge of objects and spatial relationships, movement, speed and time, color and contrast, weights and gravity.[3]</div>
+            <div class="row">
+          </div>
+        </div>
+         </div>
+        </div>
+
+  <div class="topnav">
+  </div>
+
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Gift Two</h2>
+      
+          <p>
+            <img src="lesson.png" id="image4" class="responsive">The second gift originally consisted of two wooden objects, a sphere and a cube.<br> <br>
+
+            Fröbel called this gift "the child's delight" since he observed the joy of each child discovering the differences between the sphere and cube.<br> <br>
+
+            The child is familiar with the shape of the wooden sphere, which is the same as the ball of the first gift. The wooden sphere always looks the same, when viewed from any direction. Like the child, the wooden sphere is always on the move. When rolled on a hard surface the wooden sphere produces sounds.<br> <br>
+
+            In contrast, the wooden cube is the surprise of the second gift. It remains where it is placed and from each direction presents a different appearance.<br> <br>
+
+            The second gift was developed by Fröbel to enable a child to explore and enjoy the differences between shapes. By attaching a string or inserting a rod in a hole drilled through these wooden geometric shapes, they can be spun by a child. Although the sphere always appears the same, the spinning cube reveals many shapes when spun in different ways.<br> <br>
+
+            This led Fröbel to include a wooden cylinder in the second gift, which may also be spun in many different ways.</p>
+    </div>
+    <div class="card">
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+          <div id="smalltext">
+          <p>&#8592;<img src="gift2.png" id="image6" class="responsive"></p></div>
+           <div class="row">
+          </div>
+        </div>
+         </div>
+        </div>
+
+  <div class="topnav">
+  <a></div>
+
+ <div class="leftcolumn">
+    <div class="card">
+      <h2>Gift Three</h2>
+      
+          <p>
+            <img src="blocks.png" id="blocks" class="responsive">The familiar shape of the cube is now divided into eight identical beechwood cubes, about one inch along each edge, which is a convenient size for the hand of small child. A child delights in pulling apart this gift, rearranging the eight cubes in many ways, and then reassembling them in the form of a cube. This is the first building gift.</p>
+      </div>
+    <div class="card">
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+          <div id="smalltext">
+          <p>&#8592;<img src="gift3.png" id="blocks"class="responsive"></p>
+          </div>
+          <div class="row">
+          </div>
+  </div>
+         </div>
+        </div>
+<div class="topnav">
+  <a></div>
+
+ <div class="leftcolumn">
+    <div class="card">
+      <h2>Gift Four</h2>
+      
+          <p>
+            <img src="gift4.png" id="block" class="responsive">This second building gift at first appears the same. But a surprise awaits the child, when the pieces are pulled apart. Each of these eight identical beechwood blocks is twice as long and half the width of the cubes of the previous gift. Many new possibilities for play and construction arise due to these differences.</p>
+      </div>
+    <div class="card">
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+          <div id="smalltext">
+          <p>&#8592;<img src="gift3.png" id="blocks"class="responsive"></p>
+          </div>
+          <div class="row">
+          </div>
+  </div>
+         </div>
+        </div>
+<div class="topnav">
+  <a></div>
+
+ <div class="leftcolumn">
+    <div class="card">
+      <h2>Gift Five</h2>
+      
+          <p>
+            <img src="gift5.png" id="block" class="responsive">Considered by many too complex for a young child, this building gift consists of more cubes, some of which are divided in halves or quarters.</p>
+      </div>
+    <div class="card">
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+          <div id="smalltext">
+          <p>&#8592;<img src="gift3.png" id="blocks"class="responsive"></p>
+          </div>
+          <div class="row">
+          </div>
+  </div>
+         </div>
+        </div>
+</body>
+</html>

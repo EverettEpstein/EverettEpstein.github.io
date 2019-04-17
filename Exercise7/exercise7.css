@@ -6,8 +6,7 @@
 body {
 	margin-left: 10%;
 	margin-right: 10%;
-	font-family: Helvetica;
-	font-weight: 500;
+	font-family: Untitled Sans;
 	font-size: 4rem;
 	margin-bottom: 10;
 }
@@ -15,30 +14,29 @@ body {
 .list1 {
 	color:black;
 	font-family: Times Now;
-	font-weight: 100;
+	font-weight: 50;
 }
 
 .list2 {
 	color:black;
 	font-family: Times Now;
-	font-weight: 100;
+	font-weight: 50;
 }
 
 .list3 {
 	color:black;
 	font-family: Times Now;
-	font-weight: 100;
+	font-weight: 50;
 }
 
 .list4 {
 	color:black;
 	font-family: Times Now;
-	font-weight: 100;
+	font-weight: 50;
 }
 
 button {
-	font-family: Helvetica;
-	font-weight: 500;
+	font-family: Untitled Sans;
 	font-size: 2rem;
 	background-color: transparent;
 	margin-top: 10;

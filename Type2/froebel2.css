@@ -1,17 +1,6 @@
-/* ANIMATION */
+/* COLLAPSABLE BOX ANIMATION */
 
-@-webkit-keyframes colorchange {
-      0% {
-        color: #F7D000;
-      }
-      
-      50% {
-        color: white;
-      }
-      100% {
-        color: #F7D000;
-      }
-    }
+#more {display: none;}
 
 /* TITLE */
 
@@ -24,7 +13,7 @@ body {
 }
 
 #title {
-	font-family: ohno-blazeface, sans-serif;
+	font-family: Beastly, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 275px;
@@ -50,18 +39,28 @@ canvas {
 
 /* BODY TEXT */
 
-.triangle {
-  position: relative;
-  flex-direction: column;
-  z-index: -10;
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
 }
 
-.blob {
-  margin-top: -100;
-  margin-bottom: -100;
-  width: 60%;
-  height: auto;
-  z-index: -10;
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
 }
 
 #image1{
@@ -101,7 +100,7 @@ ol{
     text-align: left;
 }
 
-p {
+#smalltext {
     margin-top:0px;
     margin-left: 10px;
     font-family: poynter-oldstyle-text, serif;
@@ -113,32 +112,25 @@ p {
     text-align: left;
 }
 
-#div1 {
-    display: block;
+#introcontainer {
+  display: block;
     width: 630px;
-    height: 500px;
+    height: 400px;
     border: none;
     float: left;
     margin-left: 65px;
     margin-right: 10px;
     margin-bottom: 10px;
+    
+}
+
+p {
     font-family: poynter-oldstyle-text, serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.2;
     font-size: 30px;
-    overflow:auto;
     color: black;
-    text-align: left;
-}
-
-#div2 {
-    display: block;
-    width: 250px;
-    height: 300px;
-    border: none;
-    float: left;
-    margin-left: 5px;
 }
 
 #quote {
@@ -156,7 +148,7 @@ p {
 #div3 {
   display: block;
   width: 610px;
-  height: 150px;
+  height: 0px;
   margin-left: 50px;
   clear:left;
 }
@@ -208,7 +200,7 @@ header {
     border: none;
     margin-left: 65px;
     float: none;
-    font-family: ohno-blazeface, sans-serif;
+    font-family: Beastly, sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: left;
@@ -230,4 +222,5 @@ footer {
     font-size: 35px;
     color: #f7d000;
 }
+
 
