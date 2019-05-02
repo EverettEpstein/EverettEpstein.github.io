@@ -205,6 +205,7 @@ Particle.prototype.update = function() {
 // Draw a line to another
 Particle.prototype.display = function(other) {
   stroke(238,45,48);
+  strokeWeight(3);
   fill('rgba(255,222,23, 1)');//Front 
   quad(this.position.x, this.position.y, 
       this.position.x-87, this.position.y-50, 

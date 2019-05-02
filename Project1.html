@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+	  <div class="text">
+	  	<h1> baroque experiments </h1> 
+	    
+	  </div>
+		<body>
+		  <link rel="stylesheet" type="text/css" href="project1.css"> </link>
+		  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+		  		<script>
+			  			$(document).ready(function(){
+							    //set variables for z-index
+							    var count = 1;
+							    var counterIncrement = 1;
+							  
+							    //set variables for canvas size
+							    var canvasWidth = 75;
+							    var canvasHeight = 75;
+							    var sizeDecrement = -3;
+							    
+							    //write a function to create one canvas
+							    function stackDiv () {
+							      //z-index and canvas size changes based on the given variables
+							      count = count + counterIncrement;
+							      canvasWidth = canvasWidth + sizeDecrement; 
+							      canvasHeight = canvasHeight + sizeDecrement; 
+							      //set canvas size and z-index for the current canvas
+							      var $canvas = $("<div class='canvas-" + count + "'></div>");
+							                    $(document.body).append($canvas);
+							                    $canvas.append("<img src='fractal.jpg'>");
+							                    $canvas.css({'width': canvasWidth + '%','height': canvasHeight + '%','z-index': count});
+							                }
+							    //run this function over time each 200 miliseconds 
+							    setInterval(stackDiv, 200);
+							 }); 
+
+		  		</script>
+		   
+		</body>
+	
+	</head>
+</html> 

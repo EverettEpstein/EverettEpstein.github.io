@@ -116,6 +116,22 @@ p {
   color: black;
 }
 
+.hoverimage1 {
+  display: block;
+  width: auto;
+  position: relative;
+  }
+  .hoverimage1 .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  }
+  .hoverimage1:hover .img-top {
+  display: inline;
+  }
+
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {   
@@ -145,7 +161,6 @@ p {
 #image2{
   display: block;
   width: auto;
-  height: 500px;
 }
 #image3{
   display: block;
@@ -234,6 +249,7 @@ p {
   }
 }
 </style>
+
 </head>
 <body>
 
@@ -251,7 +267,10 @@ p {
   <div class="leftcolumn">
     <div class="card">
       <h2>Introduction</h2>
-      <div><img src="kinder.png" id="image2" class="responsive"></div>
+      <div class="hoverimage1"> 
+        <img src="kinder.png" alt="Card Back" class="responsive">
+        <img src="kindercolor.png" class="img-top" class="responsive" alt="Card Front">
+      </div>
           <p>The Froebel gifts (German: Fröbelgaben) are play materials for young children designed by Friedrich Fröbel for the original Kindergarten at Bad Blankenburg. Playing with Froebel gifts, singing, dancing and growing plants were each important aspects of this child-centered approach to education created by Friedrich Fröbel.<br><br>
           Between May 1837 and 1850, the Froebel gifts were made in Bad Blankenburg in the Principality of Schwarzburg Rudolstadt, by master carpenter Löhn, assisted by artisans and women of the village.[2]
           <br><br>Fröbel also developed a series of occupations such as sewing, weaving and the modelling with clay, for children to reconstruct their experiences through play.<br><br>

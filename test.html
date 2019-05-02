@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<link rel="stylesheet" type="text/css" href="click.css"> </link>
+		<body>
+			  	<h1> baroque experiments </h1> 
+			  	<div id="contentContainer" class=center>
+				    <img id="thing" src="fractal.jpg" onclick="Rotate()"class="normal">
+				</div>
+				<script src="//www.kirupa.com/html5/examples/js/prefixfree.min.js"></script>
+			  	<script type="text/javascript">
+
+			  		function rotateImage() {
+			        var img = document.getElementById('thing');
+			        img.className = 'thing';
+    }
+
+					var theThing = document.querySelector("#thing");
+					var container = document.querySelector("#contentContainer");
+					 
+					container.addEventListener("click", getClickPosition, false);
+					 
+					function getClickPosition(e) {
+					    var parentPosition = getPosition(container);
+					    var xPosition = e.clientX - parentPosition.x - (theThing.clientWidth / 2);
+					    var yPosition = e.clientY - parentPosition.y - (theThing.clientHeight / 2);
+					     
+					    theThing.style.left = xPosition + "px";
+					    theThing.style.top = yPosition + "px";
+					}
+					 
+					// Helper function to get an element's exact position
+					function getPosition(el) {
+					  var xPos = 0;
+					  var yPos = 0;
+					 
+					  while (el) {
+					    if (el.tagName == "BODY") {
+					      // deal with browser quirks with body/window/document and page scroll
+					      var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+					      var yScroll = el.scrollTop || document.documentElement.scrollTop;
+					 
+					      xPos += (el.offsetLeft - xScroll + el.clientLeft);
+					      yPos += (el.offsetTop - yScroll + el.clientTop);
+					    } else {
+					      // for all other non-BODY elements
+					      xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+					      yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+					    }
+					 
+					    el = el.offsetParent;
+					  }
+					  return {
+					    x: xPos,
+					    y: yPos
+					  };
+
+					  var count = 0;}
+
+					function Rotate() {
+							var element = document.getElementById('image');
+
+							if (element.className === "normal") {
+								element.className = "rotate";
+							}
+							else if ( element.className === "rotate") {
+								element.className = 'normal';
+							}
+						}
+			  	</script>
+
+
+		</body>
+	</head>
+</html>

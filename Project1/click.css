@@ -1,0 +1,29 @@
+@font-face{
+  font-family:"GC16";
+  src:url(gc16-SemiBold.woff);
+  font-weight:Semibold;
+}
+
+
+h1 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: GC16;
+    font-size: 1000%;
+    color: black;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+    text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+p {
+  text-align: center;
+}

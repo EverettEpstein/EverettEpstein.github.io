@@ -1,0 +1,59 @@
+body {
+/*  font-family:'circular', sans-serif;
+*/}
+
+h1 {
+  margin:0;
+  text-align: left;
+  color: black;
+  font-family: Moderat;
+  font-size: 1300%;
+  word-break: break-word;
+}
+h2 {
+  color: black;
+  font-family: Moderat;
+  font-size: 500%;
+}
+
+p{
+  margin: 0px 80px 20px 90px;
+  color: black;
+  font-family: Apercu;
+  font-size: 300%;
+  word-break: break-word;
+}
+p:first-child {
+  margin-top:100px;
+}
+p:last-child {
+  margin-bottom:50px;
+}
+  
+ul{
+  margin: 0px 80px 20px 90px;
+  color: black;
+  font-family: Apercu;
+  font-size: 300%;
+  word-break: break-word;
+}
+h3 {
+  text-align: left;
+  color: black;
+  font-family: Apercu;
+  font-size: 100%;
+}
+
+body{
+  background-color: red;
+  animation-name: shift;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shift {
+  0%   {background-color: rgb(255,244,93);}
+  25%  {background-color: rgb(255,150,200);}
+  50%  {background-color: rgb(159,209,255);}
+  100% {background-color: rgb(255,244,93);}
+}
