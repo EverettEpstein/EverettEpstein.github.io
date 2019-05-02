@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+        <style>
+                @font-face {
+                font-family: "Times Now";
+                src: url("TimesNowLight.woff") format("woff");
+                }
+
+                button {
+                font-family: Helvetica;
+                font-weight: 100;
+                text-align: left;
+                font-size: 20px;
+                background-color: white;
+                /*margin-top: 10px;
+                margin-left: 60px;*/  
+                display: none;
+                }
+
+                p {
+                font-family: Helvetica;
+                font-weight: 100;
+                text-align: center;
+                font-size: 30px;
+                /*margin-top: 10px;
+                margin-left: 60px;*/  
+                }
+
+                #text1 {
+                max-width:100%;
+                }
+
+                form {
+                display:inline;
+                margin: 0px;
+                padding: 0px;
+                position: relative;
+
+                }
+
+                input[type=text] {
+                border: 0px dotted #999;
+                border-radius: 0;
+                height: 30px;
+                width: 150px;
+                padding: 0px;
+                vertical-align: middle;
+                font-family: Times Now;
+                font-weight: 200;
+                text-align: left;
+                font-size: 30px;
+                flex-shrink: 1;
+                overflow-wrap: break-word;
+
+                -webkit-appearance: none;
+                resize  : 1;
+                overflow: auto;
+                }
+
+
+                h1 {
+                font-family: Times Now;
+                font-weight: 200;
+                text-align: center;
+                font-size: 30px;
+                flex-shrink: 1;
+                /*margin-top: 10px;
+                margin-bottom : 10px;
+                margin-left: 60px; */
+                }
+
+                .card {
+                max-width:100%;
+                margin-left: 10%;
+                margin-right: 10%;
+                height: auto; 
+                /*outline: 3px solid #EE2D30;*/
+                align-content:center;
+                }
+
+
+
+               /* VIDEO RESPONSIVE */
+
+                #videosmallest {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 60%;
+                /*outline: 3px solid #EE2D30;*/
+                flex-shrink: 1;
+                }
+
+                #videosmaller {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 70%;
+                /*outline: 3px solid #EE2D30;*/
+                flex-shrink: 1;
+                }
+
+                #videomedium {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 70%;
+                /*outline: 3px solid #EE2D30;*/
+                flex-shrink: 1;
+                }
+
+                #videolarge {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 70%;
+                /*outline: 3px solid #EE2D30;*/
+                flex-shrink: 1;
+                }
+
+                #videolarger {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 70%;
+                /*outline: 3px solid #EE2D30;*/
+                flex-shrink: 1;
+                }
+
+
+            @media screen and (min-width: 1401px) and (max-width: 3200px) { 
+                #div1, #div2, #div3,#div4,{
+                    display:none;
+                    position:absolute;
+                    }
+                #div5 {
+                    display:block;
+                    position:absolute;
+                }
+            }
+
+            @media screen and (min-width: 1201px) and (max-width: 1400px) { /*Large*/
+            
+                #div1, #div2, #div3,#div5{
+                    display:none;
+                    position:absolute;
+                    }
+                #div4 {
+                    display:block;
+                    position:absolute;
+                }
+                }
+            @media screen and (min-width: 1001px) and (max-width: 1200px) { /*Medium*/
+                #div1, #div2, #div4,#div5{
+                    display:none;
+                    position:absolute;
+                    }
+                #div3 {
+                    display:block;
+                    position:absolute;
+                }
+            }
+
+            @media screen and (min-width: 801px) and (max-width: 1000px) { /*Smaller*/
+                
+                #div1, #div3, #div4,#div5{
+                    display:none;
+                    position:absolute;
+                    }
+                #div2 {
+                    display:block;
+                    position:absolute;
+                }
+            }
+            @media screen and (min-width: 376px) and (max-width: 800px) { /*Smallest*/
+        
+                #div2, #div3, #div4, #div5{
+                    display:none;
+                    position:absolute;
+                    }
+                #div1 {
+                    display:block;
+                    position:absolute;
+                }
+            }
+
+                
+        </style>
+    <body>
+        <!-- Timer 1  -->
+        <div id="div1">     
+        
+           <div class="leftcolumn">
+           <div class="card"> 
+                <h1>
+                <div id="text1">soon, we'll <form><input id="myInput" type="text" name="scheduledtime"></form>
+                    </div><br>
+                    <button id="play_button1">Set Time</button>
+                    <p id="demo1"> </p>
+                </h1>
+            </div>
+             <div class="rightcolumn">
+              <div class="clock">
+                        <video id="videosmallest">
+                            <source src="clock2.mp4" type="video/mp4">
+                        </video>
+                </div>
+              </div>
+            </div>
+            <div id="Resize">
+              <p>Resize to Time Travel</p>
+            </div> 
+        </div>
+
+        <!-- Timer 2  -->
+        <div id="div2">
+            <div class="leftcolumn">
+           <div class="card"> 
+                <h1>
+                <div id="text1">later, we'll <form><input id="myInputLater" type="text" name="scheduledtime2"></form>
+                    </div><br>
+                    <button id="play_button2">Set Time</button>
+                    <p id="demo2"> </p>
+                </h1>
+            </div>
+             <div class="rightcolumn">
+              <div class="clock">
+                        <video id="videosmaller">
+                            <source src="clock3.mp4" type="video/mp4">
+                        </video>
+                        
+              </div>
+             </div>
+          </div>
+        </div>
+
+        <!-- Timer 3  -->
+       <div id="div3">
+            <div class="leftcolumn">
+           <div class="card"> 
+                <h1>
+                <div id="text1">even later, we'll <form><input id="myInputEvenLater" type="text" name="scheduledtime3"></form>
+                    </div><br>
+                    <button id="play_button3">Set Time</button>
+                    <p id="demo3"> </p>
+                </h1>
+            </div>
+             <div class="rightcolumn">
+              <div class="clock">
+                        <video id="videomedium">
+                            <source src="clock3.mp4" type="video/mp4">
+                        </video>
+                        
+              </div>
+             </div>
+          </div>
+        </div>
+
+        <!-- Timer 4  -->
+        <div id="div4">
+            <div class="leftcolumn">
+           <div class="card"> 
+                <h1>
+                <div id="text1">someday, we'll <form><input id="myInputEvenEvenLater" type="text" name="scheduledtime4"></form>
+                    </div><br>
+                    <button id="play_button4">Set Time</button>
+                    <p id="demo4"> </p>
+                </h1>
+            </div>
+             <div class="rightcolumn">
+              <div class="clock">
+                        <video id="videolarge">
+                            <source src="clock3.mp4" type="video/mp4">
+                        </video>
+                        
+              </div>
+             </div>
+          </div>
+        </div>
+
+        <!-- Timer 5  -->
+         <div id="div5">
+            <div class="leftcolumn">
+           <div class="card"> 
+                <h1>
+                <div id="text1">someday, we'll <form><input id="myInputLast" type="text" name="scheduledtime5"></form>
+                    </div><br>
+                    <button id="play_button5">Set Time</button>
+                    <p id="demo5"> </p>
+                </h1>
+            </div>
+             <div class="rightcolumn">
+              <div class="clock">
+                        <video id="videolarger">
+                            <source src="clock3.mp4" type="video/mp4">
+                        </video>
+                        
+              </div>
+             </div>
+          </div>
+        </div>
+
+
+<script>
+
+        $(document).ready(function(){
+
+        //on button1 click
+        $('#play_button1').click(function() {
+        //disable text field 
+        $('input[name=scheduledtime]').attr("disabled", true).css('border','none');
+        //video play
+        $('#videosmallest').get(0).play();
+        //hide button
+        $(this).hide();
+        });
+
+        //on button2 click
+        $('#play_button2').click(function() {
+        //disable text field 
+        $('input[name=scheduledtime2]').attr("disabled", true).css('border','none');
+        //video play
+        $('#videosmaller').get(0).play();
+        //hide button
+        $(this).hide();
+        });
+
+        //on button3 click
+        $('#play_button3').click(function() {
+        //disable text field 
+        $('input[name=scheduledtime3]').attr("disabled", true).css('border','none');
+        //video play
+        $('#videomedium').get(0).play();
+        //hide button
+        $(this).hide();
+        });
+
+        //on button4 click
+        $('#play_button4').click(function() {
+        //disable text field 
+        $('input[name=scheduledtime4]').attr("disabled", true).css('border','none');
+        //video play
+        $('#videolarge').get(0).play();
+        //hide button
+        $(this).hide();
+        });
+
+        //on button5 click
+        $('#play_button5').click(function() {
+        //disable text field 
+        $('input[name=scheduledtime5]').attr("disabled", true).css('border','none');
+        //video play
+        $('#videolarger').get(0).play();
+        //hide button
+        $(this).hide();
+        });
+
+
+
+
+        //detect pressing enter play button1
+        $('input[name=scheduledtime]').keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){ //13 represents Enter key
+        //disable text field
+        $(this).attr("disabled", true).css('border','none');
+        //play video
+        $('#videosmallest').get(0).play();
+        //hide button
+        $('#play_button1').hide();
+        return false;
+        }
+        });
+
+
+        //detect pressing enter play button2
+        $('input[name=scheduledtime2]').keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){ //13 represents Enter key
+        //disable text field
+        $(this).attr("disabled", true).css('border','none');
+        //play video
+        $('#videosmaller').get(0).play();
+        //hide button
+        $('#play_button2').hide();
+        return false;
+        }
+        });
+
+        //detect pressing enter play button3
+        $('input[name=scheduledtime3]').keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){ //13 represents Enter key
+        //disable text field
+        $(this).attr("disabled", true).css('border','none');
+        //play video
+        $('#videomedium').get(0).play();
+        //hide button
+        $('#play_button3').hide();
+        return false;
+        }
+        });
+
+        //detect pressing enter play button4
+        $('input[name=scheduledtime4]').keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){ //13 represents Enter key
+        //disable text field
+        $(this).attr("disabled", true).css('border','none');
+        //play video
+        $('#videolarge').get(0).play();
+        //hide button
+        $('#play_button4').hide();
+        return false;
+        }
+        });
+
+        //detect pressing enter play button4
+        $('input[name=scheduledtime5]').keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){ //13 represents Enter key
+        //disable text field
+        $(this).attr("disabled", true).css('border','none');
+        //play video
+        $('#videolarger').get(0).play();
+        //hide button
+        $('#play_button5').hide();
+        return false;
+        }
+        });
+
+
+
+        //when videosmallest ends — what would happen?
+        $('#videosmallest').on('ended', function(){
+        //do something
+        });
+
+        });
+
+        //when videosmallest ends — what would happen?
+        $('#videosmaller').on('ended', function(){
+        //do something
+        });
+
+        
+        // CONTROL VIDEO SPEED BASED ON TIMERS // 
+
+        document.querySelector('#videosmallest').playbackRate = .25;
+        document.querySelector('#videosmaller').playbackRate = .15;
+        document.querySelector('#videomedium').playbackRate = .15;
+        document.querySelector('#videolarge').playbackRate = .15;
+        document.querySelector('#videolarger').playbackRate = .15;
+
+
+        //TIMER 1 //
+
+        // Set the date we're counting down to
+
+        var countDownDate = new Date("May 4, 2019 16:37:25").getTime();
+
+        // Update the count down every 1 second
+
+        var x = setInterval(function() {
+
+        // Get todays date and time
+
+        var now = new Date().getTime();
+
+        // Find the distance between now an the count down date
+
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+
+        document.getElementById("demo1").innerHTML = days + "d " + hours + "h "
+
+        + minutes + "m " + seconds + "s ";
+
+        // If the count down is over, write some text
+
+        if (distance < 0) {
+
+        clearInterval(x);
+
+        document.getElementById("demo1").innerHTML = "goodbye";
+
+        }
+
+        }, 1000);
+
+        //TIMER 2 //
+
+        // Set the date we're counting down to
+
+        var countDownDate = new Date("May 12, 2019 19:40:25").getTime();
+
+        // Update the count down every 1 second
+
+        var x = setInterval(function() {
+
+        // Get todays date and time
+
+        var now = new Date().getTime();
+
+        // Find the distance between now an the count down date
+
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+
+        document.getElementById("demo2").innerHTML = days + "d " + hours + "h "
+
+        + minutes + "m " + seconds + "s ";
+
+        // If the count down is over, write some text
+
+        if (distance < 0) {
+
+        clearInterval(x);
+
+        document.getElementById("demo2").innerHTML = "goodbye";
+
+        }
+
+        }, 1000);
+</script>
+
+    </body>
+</html>
