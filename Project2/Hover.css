@@ -170,7 +170,7 @@ a:hover>div {
   position: relative;
   size: 50%;
   flex-direction: column;
-  z-index:1;
+  z-index:3;
 }
 
 .pentagon {
@@ -297,9 +297,10 @@ a:hover>div {
 .image1 {
   width: 60%;
   height: auto;
-  -webkit-animation:spin 4s linear infinite;
+  z-index: -1;
+ /* -webkit-animation:spin 4s linear infinite;
   -moz-animation:spin 4s linear infinite;
-  animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;*/
 }
 
 .smallpent {

@@ -1,11 +1,35 @@
 // IMAGE CURSOR //
 
+  $(document).ready(function(){
+  	cursorposition();
+  });  
+  $(window).resize(function(){
+  	cursorposition();
+  });
+
+
+
+function cursorposition() {
+
 $(document).mousemove(function(e) {
-    $(".triangle").offset({
-        left: e.pageX -370,
-        top: e.pageY + -400
-    });
+	if ($(window).width() > 1024) {
+		$(".triangle").offset({
+	        left: e.pageX -300,
+	        top: e.pageY + -300
+    	});
+	} if ($(window).width() < 1024) {
+		$(".triangle").offset({
+		left: e.pageX -250,
+		top: e.pageY + -250
+		});
+	}
 });
+
+}
+
+// $(document).mousemove(function(e){
+//     $("#blob").css({left:e.pageX, top:e.pageY});
+// });
 
 // BEGIN MUSIC //
 
