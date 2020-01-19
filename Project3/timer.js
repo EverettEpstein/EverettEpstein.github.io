@@ -19,7 +19,7 @@ vid.load();
 
 // Set the date we're counting down to
 
-        var countDownDate = new Date("April 20, 2019 16:37:25").getTime();
+        var countDownDate = new Date("January 20, 2020 16:37:25").getTime();
 
         // Update the count down every 1 second
 
